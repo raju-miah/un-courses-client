@@ -14,9 +14,9 @@ const Header = () => {
                 <Link to='/courses'><li>COURSES</li></Link>
                 <Link to='/faq'><li>FAQ</li></Link>
                 <Link to='/blog'><li>BLOG</li></Link>
-                <button className='btn-login'><Link to='/login'><li>LOGIN</li></Link></button>
-                <button><Link to='/signup'><li>SIGN UP</li></Link></button>
-                <button><Link to='/dark'><li>DARK</li></Link></button>
+                <button className='nav-btn'><Link to='/login'><li>LOGIN</li></Link></button>
+                <button className='nav-btn'><Link to='/signup'><li>SIGN UP</li></Link></button>
+                <button className='nav-btn'><Link to='/dark'><li>DARK</li></Link></button>
             </ul>
         </nav>
     );
