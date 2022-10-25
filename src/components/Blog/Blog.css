@@ -1,0 +1,19 @@
+.blog-header {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.blog-ques {
+    background-color: #222831;
+    color: #F9F9F9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.blog-ques h3 {
+    color: lightgreen;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
