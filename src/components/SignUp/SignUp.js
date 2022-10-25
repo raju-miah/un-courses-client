@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { AuthContext } from '../../UsserContext/UserContext';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './SignUp.css';
 
 const SignUp = () => {
@@ -25,6 +25,7 @@ const SignUp = () => {
             .catch(error => {
                 console.error(error)
             })
+
     }
     return (
         <div className='container-sin'>

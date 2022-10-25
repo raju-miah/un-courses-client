@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useContext } from 'react';
-import { AuthContext } from '../../UsserContext/UserContext';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Login.css';
 
 const Login = () => {
-    const [error, setError] = useState();
-
     const { logIn } = useContext(AuthContext);
 
     const handelSubmit = event => {
@@ -25,8 +23,8 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error)
-                setError(error.message);
             })
+
 
     }
     return (
@@ -42,7 +40,6 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" />
                 </div>
-                <span> {error}</span>
                 <button className='btn-login' type="submit">Login</button>
             </form>
         </div>

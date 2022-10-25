@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
-import { AuthContext } from '../../UsserContext/UserContext';
+import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const FAQ = () => {
     const { user } = useContext(AuthContext);
+
     return (
         <div>
             <h2>This is FAQ</h2>
