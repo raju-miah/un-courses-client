@@ -1,10 +1,24 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Login.css';
 
 const Login = () => {
-    const { logIn } = useContext(AuthContext);
+    const { logIn, googleLogin } = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handelGoogleLogin = () => {
+        googleLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
 
     const handelSubmit = event => {
         event.preventDefault();
@@ -42,6 +56,7 @@ const Login = () => {
                 </div>
                 <button className='btn-login' type="submit">Login</button>
             </form>
+            <button onClick={handelGoogleLogin}>Login with Google</button>
         </div>
     );
 };
