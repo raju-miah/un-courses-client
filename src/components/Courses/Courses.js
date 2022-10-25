@@ -41,7 +41,8 @@ const Courses = () => {
                                 </span>
                                 <span>{courseCard.students}</span>
                             </div>
-                            <button className='btn-details'><Link to={`/courses/${courseCard.id}`}>Details</Link></button>
+
+                            <Link to={`/courses/${courseCard.id}`}><button className='btn-details'>Details</button></Link>
                         </div>)}
                     </div>
                 </div>
