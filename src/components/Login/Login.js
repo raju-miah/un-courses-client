@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
@@ -7,7 +7,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Login.css';
 
 const Login = () => {
-    const { logIn, googleLogin } = useContext(AuthContext);
+    const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState('');
     const location = useLocation();
@@ -16,8 +16,21 @@ const Login = () => {
 
     const googleProvider = new GoogleAuthProvider();
 
+    const githubProvider = new GithubAuthProvider();
+
     const handelGoogleLogin = () => {
         googleLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+    const handelGithubLogin = () => {
+        githubLogin(githubProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user)
@@ -68,6 +81,7 @@ const Login = () => {
             </form>
             <span>{error}</span>
             <button onClick={handelGoogleLogin}>Login with Google</button>
+            <button onClick={handelGithubLogin}>Login with GitHub</button>
         </div>
     );
 };
