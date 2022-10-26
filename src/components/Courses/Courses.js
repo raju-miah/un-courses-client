@@ -30,7 +30,7 @@ const Courses = () => {
                             <img src={courseCard.img} alt="" />
                             <h3>{courseCard.name}</h3>
                             <p>{courseCard.title}</p>
-                            <p>{courseCard.author_name}</p>
+                            <p>by: {courseCard.author_name}</p>
                             <div className='rating-student'>
                                 <span>{courseCard.ratings}
                                     <FaStar className='star' />

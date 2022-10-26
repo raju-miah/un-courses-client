@@ -23,3 +23,14 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+.btn-pdf {
+    padding: 15px 100px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: orange;
+    background: teal;
+    margin-top: 20px;
+    cursor: pointer;
+}
