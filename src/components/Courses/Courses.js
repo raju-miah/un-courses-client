@@ -23,7 +23,7 @@ const Courses = () => {
                     }
                 </div>
                 <div className='right-side'>
-                    <h2>This is courses card details</h2>
+                    {/* <h2>This is courses card details</h2> */}
                     <div className='card-parent'>
                         {courses.map(courseCard => <div className='card' key={courseCard.id}>
 
