@@ -2,3 +2,14 @@
     display: flex;
     align-items: center;
 }
+
+.see-our-courses {
+    width: 40%;
+    padding: 25px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    color: orange;
+    background: teal;
+    cursor: pointer;
+}

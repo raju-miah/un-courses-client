@@ -8,6 +8,7 @@ import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login";
 import SignUp from "../../components/SignUp/SignUp";
 import Main from "../../Layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/courses/${params.id}`);
                 },
-                element: <CoursesBuy></CoursesBuy>
+                element: <PrivateRoute><CoursesBuy></CoursesBuy></PrivateRoute>
             },
             {
                 path: '/faq',

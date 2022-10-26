@@ -68,4 +68,7 @@
     border-radius: 10px;
     margin: 10px;
     cursor: pointer;
+    color: orange;
+    background: teal;
+    font-size: 18px;
 }

@@ -18,7 +18,8 @@
     font-size: 18px;
     border: none;
     border-radius: 10px;
-    background: orange;
+    color: orange;
+    background: teal;
     margin-top: 20px;
     cursor: pointer;
 }
