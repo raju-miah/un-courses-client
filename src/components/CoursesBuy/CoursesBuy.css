@@ -1,0 +1,30 @@
+.buy-course {
+    border: 2px solid tomato;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+}
+
+.buy-course img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    color: orange;
+}
+
+.btn-buy-now {
+    padding: 12px 90px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: orange;
+    background: teal;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

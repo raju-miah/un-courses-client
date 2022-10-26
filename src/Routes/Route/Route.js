@@ -34,6 +34,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/coursesbuy/:id',
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/courses/${params.id}`);
+                },
                 element: <CoursesBuy></CoursesBuy>
             },
             {
