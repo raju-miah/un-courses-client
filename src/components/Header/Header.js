@@ -43,7 +43,7 @@ const Header = () => {
                 }
                 {
                     user?.photoURL ?
-                        <img style={{ height: '30px' }} src={user?.photoURL} alt="" />
+                        <img className='user-img' src={user?.photoURL} alt="" />
                         :
                         <FaUser />
                 }

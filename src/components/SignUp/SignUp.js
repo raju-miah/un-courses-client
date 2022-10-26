@@ -5,7 +5,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './SignUp.css';
 
 const SignUp = () => {
-    const { singUp } = useContext(AuthContext);
+    const { singUp, updateUserProfile } = useContext(AuthContext);
     const [error, setError] = useState('');
 
     const handelSubmit = event => {
@@ -17,7 +17,7 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name, photoURL, email, password)
+        // console.log(name, photoURL, email, password)
 
         singUp(email, password)
             .then(result => {
@@ -25,6 +25,7 @@ const SignUp = () => {
                 console.log(user)
                 setError('');
                 form.reset();
+                handelUserProfile(name, photoURL);
             })
             .catch(error => {
                 console.error(error)
@@ -32,6 +33,17 @@ const SignUp = () => {
             })
 
     }
+
+    const handelUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
     return (
         <div className='container-sin'>
             <h2 className='form-text'>Sign Up</h2>

@@ -64,3 +64,9 @@ a {
     background-color: #EE5b47;
     color: #F9F9F9;
 }
+
+.user-img {
+    height: 30px;
+    border-radius: 50%;
+
+}
