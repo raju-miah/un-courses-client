@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './SignUp.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const SignUp = () => {
     const { singUp, updateUserProfile } = useContext(AuthContext);
@@ -27,6 +28,7 @@ const SignUp = () => {
                 setError('');
                 form.reset();
                 handelUserProfile(name, photoURL);
+                toast.success('You are Successfully signUp!')
             })
             .catch(error => {
                 console.error(error)
@@ -51,12 +53,12 @@ const SignUp = () => {
             <form onSubmit={handelSubmit} className='form-signup'>
                 <div className='form-control-s'>
                     <label htmlFor="name">Your Name</label>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" required />
                 </div>
 
                 <div className='form-control-s'>
                     <label htmlFor="photoURL">PhotoURL</label>
-                    <input type="text" name="photoURL" />
+                    <input type="text" name="photoURL" required />
                 </div>
 
                 <div className='form-control-s'>
@@ -72,6 +74,7 @@ const SignUp = () => {
                 <button className='btn-login' type="submit">Sign Up</button>
             </form>
             <p><span className='dont-acc'>Already have an a account? </span><Link to='/login'>Login Now</Link> </p>
+            <Toaster />
         </div>
     );
 };
