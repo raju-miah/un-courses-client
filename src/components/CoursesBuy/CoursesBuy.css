@@ -28,3 +28,13 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+@media screen and (max-width: 768px) {
+    .buy-course {
+        border: 2px solid tomato;
+        border-radius: 10px;
+        width: 360px;
+        margin: auto;
+        padding: 10px;
+    }
+}

@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Header.css';
 import { FaUser } from "react-icons/fa";
+import { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
+import { ImCross } from 'react-icons/im';
 
 const Header = () => {
+    const [menu, setMenu] = useState(false);
+
     const { user, logOut } = useContext(AuthContext);
 
     const handelLogOut = () => {
@@ -20,11 +25,8 @@ const Header = () => {
             <div>
                 <h3 className='nav-text'><span className='text-un'>un</span>Courses</h3>
             </div>
-            <ul className='nav-links'>
-                <label className='switch'>
-                    <input type="checkbox" />
-                    <span className='slider'></span>
-                </label>
+            <ul className={menu ? "nav-links-mobile" : "nav-links"} onClick={() => setMenu(false)}>
+
                 <Link to='/'><li>HOME</li></Link>
                 <Link to='/courses'><li>COURSES</li></Link>
                 <Link to='/faq'><li>FAQ</li></Link>
@@ -52,7 +54,19 @@ const Header = () => {
                         </>
                 }
 
+                <label className='switch'>
+                    <input type="checkbox" />
+                    <span className='slider'></span>
+                </label>
+
             </ul>
+            <button onClick={() => setMenu(!menu)} className='mobile-menu'>
+                {
+                    menu ?
+                        <ImCross></ImCross>
+                        : <FaBars></FaBars>
+                }
+            </button>
         </nav>
     );
 };

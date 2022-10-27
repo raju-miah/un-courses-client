@@ -24,3 +24,15 @@
     font-size: 28px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+    .blog {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-header {
+        font-size: 32px;
+        font-weight: bold;
+    }
+}

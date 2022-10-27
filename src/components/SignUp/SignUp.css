@@ -1,16 +1,55 @@
 .container-sin {
     width: 70%;
-    height: 450px;
+    height: 650px;
     margin: 20px auto;
     border: 1px solid #95A0A7;
     border-radius: 8px;
 }
 
-.form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.form-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.form-control label {
+.form-control-s label {
+    display: block;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+}
+
+.form-control-s input {
+    width: 350px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.form-control-s label {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-sin {
+        width: 85%;
+        height: 665px;
+        margin: 20px auto;
+        border: 1px solid #95A0A7;
+        border-radius: 8px;
+    }
+
+    .form-control-s input {
+        width: 295px;
+        height: 55px;
+        border: 1px solid #95A0A7;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px;
+        margin: 10px;
+    }
 }

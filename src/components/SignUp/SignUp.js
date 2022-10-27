@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './SignUp.css';
 
@@ -47,29 +48,30 @@ const SignUp = () => {
     return (
         <div className='container-sin'>
             <h2 className='form-text'>Sign Up</h2>
-            <form onSubmit={handelSubmit} className='form'>
-                <div className='form-control'>
+            <form onSubmit={handelSubmit} className='form-signup'>
+                <div className='form-control-s'>
                     <label htmlFor="name">Your Name</label>
                     <input type="text" name="name" />
                 </div>
 
-                <div className='form-control'>
+                <div className='form-control-s'>
                     <label htmlFor="photoURL">PhotoURL</label>
                     <input type="text" name="photoURL" />
                 </div>
 
-                <div className='form-control'>
+                <div className='form-control-s'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" required />
                 </div>
 
-                <div className='form-control'>
+                <div className='form-control-s'>
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" required />
                 </div>
+                <p className='error-m'>{error}</p>
                 <button className='btn-login' type="submit">Sign Up</button>
             </form>
-            <span>{error}</span>
+            <p><span className='dont-acc'>Already have an a account? </span><Link to='/login'>Login Now</Link> </p>
         </div>
     );
 };

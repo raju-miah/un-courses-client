@@ -2,7 +2,7 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Login.css';
 
@@ -79,11 +79,14 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" />
                 </div>
+                <p className='error-m'>{error}</p>
                 <button className='btn-login' type="submit">Login</button>
             </form>
-            <span>{error}</span>
-            <button onClick={handelGoogleLogin}>Login with Google</button>
-            <button onClick={handelGithubLogin}>Login with GitHub</button>
+            <p><span className='dont-acc'>Dont't have an a account? </span><Link to='/signup'>create account now</Link> </p>
+            <div>
+                <button onClick={handelGoogleLogin} className='btn-google'>Login with Google</button>
+                <button onClick={handelGithubLogin} className='btn-github'>Login with GitHub</button>
+            </div>
         </div>
     );
 };

@@ -10,6 +10,7 @@
     font-size: 18px;
     background-color: #B9FFFC;
     border-radius: 10px;
+    margin: 20px;
 }
 
 .left-side p {
@@ -22,7 +23,7 @@
     /* box-shadow: 0px 0px 15px -5px #000; */
     border: 2px solid tomato;
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px;
     background-color: #B9FFFC;
     padding: 5px;
 }
@@ -71,4 +72,27 @@
     color: orange;
     background: #303841;
     font-size: 18px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .courses {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-side {
+        padding: 5px;
+        text-align: left;
+        font-size: 18px;
+        background-color: #B9FFFC;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .card-parent {
+        display: flex;
+        flex-direction: column;
+    }
 }
