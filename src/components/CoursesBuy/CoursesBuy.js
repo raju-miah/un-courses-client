@@ -1,9 +1,13 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './CoursesBuy.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const CoursesBuy = () => {
     const coursesBuy = useLoaderData();
+
+    const notify = () => toast.success('Congratulations you are Successfully buy this course');
+
     return (
         <div>
             <h2>Buy this course</h2>
@@ -14,10 +18,11 @@ const CoursesBuy = () => {
                         <h4>{buy.name}</h4>
                         <p className='price'>${buy.price}</p>
                         <p>by {buy.author_name}</p>
-                        <button className='btn-buy-now'>Buy Now</button>
+                        <button onClick={notify} className='btn-buy-now'>Buy Now</button>
                     </div>
                 </div>)
             }
+            <Toaster />
         </div>
     );
 };
