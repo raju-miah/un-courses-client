@@ -3,6 +3,26 @@
     align-items: center;
 }
 
+.home-text {
+    padding: 50px;
+}
+
+.home-text h1 {
+    font-size: 45px;
+}
+
+.home-text h2 {
+    font-size: 80px;
+}
+
+.home-text p {
+    font-size: 18px;
+}
+
+.home-un {
+    font-style: italic;
+}
+
 .see-our-courses {
     width: 40%;
     padding: 25px;
@@ -10,6 +30,6 @@
     border: none;
     border-radius: 10px;
     color: orange;
-    background: teal;
+    background: #303841;
     cursor: pointer;
 }

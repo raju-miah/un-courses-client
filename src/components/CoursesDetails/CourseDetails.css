@@ -7,6 +7,7 @@
     margin: 50px;
     border-radius: 20px;
     gap: 20px;
+    background-color: #B9FFFC;
 }
 
 .card-details-left img {
@@ -19,7 +20,7 @@
     border: none;
     border-radius: 10px;
     color: orange;
-    background: teal;
+    background: #303841;
     margin-top: 20px;
     cursor: pointer;
 }
@@ -30,7 +31,7 @@
     border: none;
     border-radius: 10px;
     color: orange;
-    background: teal;
+    background: #303841;
     margin-top: 20px;
     cursor: pointer;
 }

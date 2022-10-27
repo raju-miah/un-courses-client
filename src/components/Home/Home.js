@@ -6,9 +6,9 @@ const Home = () => {
     return (
         <div>
             <div className='home'>
-                <div>
+                <div className='home-text'>
                     <h1>Welcome to</h1>
-                    <h2>unCourses</h2>
+                    <h2><span className='home-un'>un</span>Courses</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit explicabo consectetur quam debitis possimus fugit exercitationem ducimus aliquam officia deserunt!</p>
                 </div>
                 <img src="https://i.ibb.co/hZ5X192/header.png" alt="" />

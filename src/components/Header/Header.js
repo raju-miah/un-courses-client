@@ -16,12 +16,15 @@ const Header = () => {
 
     return (
         <nav className='navbar'>
-            <h3 className='nav-logo'>logo</h3>
+            <img className='logo' src="https://i.ibb.co/RjrbD88/Minimalist-Simple-Initial-logo-2-removebg-preview.png" alt="" />
             <div>
                 <h3 className='nav-text'><span className='text-un'>un</span>Courses</h3>
             </div>
             <ul className='nav-links'>
-                <button className='nav-btn'><Link>DARK</Link></button>
+                <label className='switch'>
+                    <input type="checkbox" />
+                    <span className='slider'></span>
+                </label>
                 <Link to='/'><li>HOME</li></Link>
                 <Link to='/courses'><li>COURSES</li></Link>
                 <Link to='/faq'><li>FAQ</li></Link>

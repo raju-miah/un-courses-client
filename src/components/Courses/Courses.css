@@ -8,7 +8,7 @@
     padding: 5px;
     text-align: left;
     font-size: 18px;
-    background-color: #BCCEF8;
+    background-color: #B9FFFC;
     border-radius: 10px;
 }
 
@@ -19,11 +19,11 @@
 
 
 .card {
-    box-shadow: 0px 0px 15px -5px #000;
-    /* border: 2px solid tomato; */
+    /* box-shadow: 0px 0px 15px -5px #000; */
+    border: 2px solid tomato;
     border-radius: 10px;
     margin: 10px;
-    background-color: #BCCEF8;
+    background-color: #B9FFFC;
     padding: 5px;
 }
 
@@ -69,6 +69,6 @@
     margin: 10px;
     cursor: pointer;
     color: orange;
-    background: teal;
+    background: #303841;
     font-size: 18px;
 }
