@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <nav className='navbar'>
-            <img className='logo' src="https://i.ibb.co/RjrbD88/Minimalist-Simple-Initial-logo-2-removebg-preview.png" alt="" />
+            {/* <img className='logo' src="https://i.ibb.co/RjrbD88/Minimalist-Simple-Initial-logo-2-removebg-preview.png" alt="" /> */}
             <div>
                 <h3 className='nav-text'><span className='text-un'>un</span>Courses</h3>
             </div>
